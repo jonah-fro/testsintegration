@@ -1,8 +1,27 @@
 describe('Ecosia example', function() {
 
-    beforeEach(browser => browser.url('https://www.ecosia.org/'));
+    beforeEach(browser => browser.url('https://www.uber.com/fr/fr/'));
 
-    test('Demo test ecosia.org', function (browser) {
+test('Demo test ecosia.org', function (browser) {
+      browser
+      .waitForElementVisible('body', 1000)
+      .click('//button[type=Connectez-vous]')
+      .assert.button('Se connecter en tant que chauffeur')
+      .assert.button('Se connecter en tant que passager')
+      .end();
+    });
+
+/*
+test('Demo test ecosia.org', function (browser) {
+      browser
+      .url('https://www.uber.com/fr/fr/')
+      .waitForElementVisible('body', 1000)
+      .assert.buttons('Connectez-vous')
+      .assert.buttons('Inscrivez-vous')
+      .end();
+    });
+    */
+  /*  test('Demo test ecosia.org', function (browser) {
       browser
         .waitForElementVisible('body')
         .assert.titleContains('Ecosia')
@@ -13,6 +32,7 @@ describe('Ecosia example', function() {
         .assert.containsText('.mainline-results', 'Nightwatch.js')
         .end();
     });
+*/
 
 /*
 // Exemple pour basculer sur du XPATH
