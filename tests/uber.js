@@ -13,4 +13,15 @@ describe('Ecosia example', function() {
         .assert.containsText('.mainline-results', 'Nightwatch.js')
         .end();
     });
+
+/*
+// Exemple pour basculer sur du XPATH
+.useXpath() 
+   .waitForElementPresent('//button[@id="/sign-in/"]')
+   .waitForElementPresent('//button[@id="/signup/"]')
+// Revenir sur du CSS
+.useCSS()
+*/
+
+
 });
