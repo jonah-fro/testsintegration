@@ -2,4 +2,4 @@ Pour lancer les tests :
 
 Revoir le fichier package.json :
 
-> npm test
+> ./node_modules/.bin/nightwatch ./tests/uber.js
